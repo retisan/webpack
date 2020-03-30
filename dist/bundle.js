@@ -118,7 +118,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.js */ \"./src/header.js\");\n/* harmony import */ var _Content_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Content.js */ \"./src/Content.js\");\n\r\n\r\n\r\nnew _header_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nnew _Content_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.js */ \"./src/header.js\");\n/* harmony import */ var _Content_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Content.js */ \"./src/Content.js\");\n\r\n\r\n\r\nconst img = __webpack_require__(/*! ./test2.jpg */ \"./src/test2.jpg\");\r\n\r\nnew _header_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nnew _Content_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/test2.jpg":
+/*!***********************!*\
+  !*** ./src/test2.jpg ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"d4d5fc05a4926f051b1944fe04ca26cd.jpg\");\n\n//# sourceURL=webpack:///./src/test2.jpg?");
 
 /***/ })
 

@@ -8,6 +8,7 @@
   "author": "retisan",
   "license": "ISC",
   "devDependencies": {
+    "file-loader": "^6.0.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   }
