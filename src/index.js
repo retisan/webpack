@@ -1,5 +1,5 @@
 import jpg from "./test2.jpg";
-import "./index.css";
+import "./index.scss";
 
 const img = new Image();
 img.src = jpg;
