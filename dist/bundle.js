@@ -86,30 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/Content.js":
-/*!************************!*\
-  !*** ./src/Content.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst arr = [];\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n    const dom = document.querySelector(\"#root\");\r\n    var content = document.createElement(\"div\");\r\n    content.innerHTML = \"content\";\r\n    dom.appendChild(content);\r\n});;\r\n\n\n//# sourceURL=webpack:///./src/Content.js?");
-
-/***/ }),
-
-/***/ "./src/header.js":
-/*!***********************!*\
-  !*** ./src/header.js ***!
-  \***********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n    var dom = document.querySelector(\"#root\");\r\n    var header = document.createElement(\"div\");\r\n    header.innerHTML = \"header\";\r\n    dom.appendChild(header);\r\n});;\r\n\n\n//# sourceURL=webpack:///./src/header.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -118,7 +94,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.js */ \"./src/header.js\");\n/* harmony import */ var _Content_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Content.js */ \"./src/Content.js\");\n\r\n\r\n\r\nconst img = __webpack_require__(/*! ./test2.jpg */ \"./src/test2.jpg\");\r\n\r\nnew _header_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\nnew _Content_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test2_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test2.jpg */ \"./src/test2.jpg\");\n\r\nconsole.warn(_test2_jpg__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\r\n\r\nconst img = new Image();\r\nimg.src = _test2_jpg__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\r\ndocument.body.appendChild(img);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -130,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hea
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"d4d5fc05a4926f051b1944fe04ca26cd.jpg\");\n\n//# sourceURL=webpack:///./src/test2.jpg?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/src/test2.jpg\");\n\n//# sourceURL=webpack:///./src/test2.jpg?");
 
 /***/ })
 

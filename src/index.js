@@ -1,7 +1,6 @@
-import Header from "./header.js";
-import Content from "./Content.js";
+import jpg from "./test2.jpg";
+console.warn(jpg);
 
-const img = require("./test2.jpg");
-
-new Header();
-new Content();
+const img = new Image();
+img.src = jpg;
+document.body.appendChild(img);

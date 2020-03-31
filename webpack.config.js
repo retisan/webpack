@@ -7,7 +7,14 @@ module.exports = {
         rules: [
             {
                 test: /\.jpg$/,
-                loader: "file-loader"
+                use: {
+                    loader: "url-loader",
+                    options: {
+                        name: "[path][name].[ext]",
+                        outputPath: "images",
+                        limit: 10240
+                    }
+                }
             }
         ]
     },
