@@ -6,7 +6,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jpg$/,
+                test: /\.(jpg|woff|svg|eot|ttf)$/,
                 use: {
                     loader: "url-loader",
                     options: {
@@ -17,14 +17,11 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(css|scss)$/,
                 use: [
                     "style-loader",
                     {
                         loader: "css-loader",
-                        options: {
-                            modules: true
-                        }
                     },
                     "sass-loader",
                     "postcss-loader"

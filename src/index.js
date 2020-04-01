@@ -1,7 +1,3 @@
-import jpg from "./test2.jpg";
-import style from "./index.scss";
+import "../icomoon/style.css";
 
-const img = new Image();
-img.src = jpg;
-img.classList.add(style.img);
-document.body.appendChild(img);
+document.body.innerHTML = "<div class='icon-arrow_top'></div>";
