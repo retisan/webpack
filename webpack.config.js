@@ -4,7 +4,10 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 // plugins帮助我们在webpack打包的生命周期中做一些事情
 module.exports = {
     mode: "development",
-    entry: "./src/index.js",
+    entry: {
+        main: "./src/index.js",
+        sub: "./src/index.js"
+    },
     module: {
         rules: [
             {
@@ -32,7 +35,7 @@ module.exports = {
         ]
     },
     output: {
-        filename: "index.js",
+        filename: "[name].js",
         path: path.resolve(__dirname, "dist")
     },
     plugins: [new HtmlWebpackPlugin(), new CleanWebpackPlugin()]
