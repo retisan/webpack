@@ -1,5 +1,7 @@
 const path = require("path");
-
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+// plugins帮助我们在webpack打包的生命周期中做一些事情
 module.exports = {
     mode: "development",
     entry: "./src/index.js",
@@ -21,7 +23,7 @@ module.exports = {
                 use: [
                     "style-loader",
                     {
-                        loader: "css-loader",
+                        loader: "css-loader"
                     },
                     "sass-loader",
                     "postcss-loader"
@@ -30,7 +32,8 @@ module.exports = {
         ]
     },
     output: {
-        filename: "bundle.js",
+        filename: "index.js",
         path: path.resolve(__dirname, "dist")
-    }
+    },
+    plugins: [new HtmlWebpackPlugin(), new CleanWebpackPlugin()]
 };
