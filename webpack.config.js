@@ -4,9 +4,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 // plugins帮助我们在webpack打包的生命周期中做一些事情
 module.exports = {
     mode: "development",
+    devtool: "cheap-module-source-map",
     entry: {
         main: "./src/index.js",
-        sub: "./src/index.js"
     },
     module: {
         rules: [
