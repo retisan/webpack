@@ -1,1 +1,3 @@
-console.log("hellosssssss");
+import count from "./count";
+
+count();
