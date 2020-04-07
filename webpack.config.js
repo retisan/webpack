@@ -9,13 +9,23 @@ module.exports = {
     devServer: {
         contentBase: "./dist",
         open: true,
-        hot: true
+        hot: true,
     },
     entry: {
         main: "./src/index.js",
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"],
+                    },
+                },
+            },
             {
                 test: /\.(jpg|woff|svg|eot|ttf)$/,
                 use: {
@@ -48,6 +58,6 @@ module.exports = {
         new HtmlWebpackPlugin(),
         new CleanWebpackPlugin(),
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
     ],
 };

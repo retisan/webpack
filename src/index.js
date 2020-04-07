@@ -1,3 +1,5 @@
-import count from "./count";
+const arr = [];
 
-count();
+const fn = () => {};
+
+arr.map((params) => {});
