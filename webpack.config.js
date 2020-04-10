@@ -26,7 +26,7 @@ module.exports = {
                             [
                                 "@babel/preset-env",
                                 {
-                                    useBuiltIns: "entry",
+                                    useBuiltIns: "entry",// 使用babel-polyfill时，只处理使用过的es6相关特效
                                 },
                             ],
                         ],
