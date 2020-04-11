@@ -5,7 +5,7 @@ const webpack = require("webpack");
 // plugins帮助我们在webpack打包的生命周期中做一些事情
 module.exports = {
     mode: "development",
-    devtool: "cheap-module-source-map",
+    devtool: "cheap-module-eval-source-map",
     devServer: {
         contentBase: "./dist",
         open: true,
@@ -18,7 +18,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: /node_modules/, // 忽略node_modules，提升打包速度
                 use: {
                     loader: "babel-loader",
                     options: {
@@ -26,9 +26,13 @@ module.exports = {
                             [
                                 "@babel/preset-env",
                                 {
-                                    useBuiltIns: "entry",// 使用babel-polyfill时，只处理使用过的es6相关特性
+                                    targets: {
+                                        chrome: "64",
+                                    },
+                                    useBuiltIns: "entry", // 使用babel-polyfill时，只处理使用过的es6相关特性
                                 },
                             ],
+                            "@babel/preset-react",
                         ],
                     },
                 },
@@ -62,7 +66,9 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
     },
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: "src/index.html",
+        }),
         new CleanWebpackPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
