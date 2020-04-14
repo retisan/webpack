@@ -1,7 +1,5 @@
+import { add } from "./math";
 import "@babel/polyfill";
+import "./index.css";
 
-const arr = [];
-
-const fn = () => {};
-
-arr.map((params) => {});
+add(1, 2);
