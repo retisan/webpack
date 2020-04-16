@@ -1,11 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const webpack = require("webpack");
-// plugins帮助我们在webpack打包的生命周期中做一些事情
+
 module.exports = {
-    mode: "production",
-    devtool: "cheap-module-source-map",
+    mode: "development",
     devServer: {
         contentBase: "./dist",
         open: true,
@@ -67,9 +64,6 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "src/index.html",
-        }),
-        new CleanWebpackPlugin(),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
+        })
     ],
 };
