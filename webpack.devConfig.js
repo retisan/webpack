@@ -1,4 +1,3 @@
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const commonConfig = require("./webpack.common");
@@ -12,7 +11,6 @@ const devConfig = {
         hot: true,
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ]
