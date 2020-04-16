@@ -4,8 +4,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require("webpack");
 // plugins帮助我们在webpack打包的生命周期中做一些事情
 module.exports = {
-    mode: "development",
-    devtool: "cheap-module-eval-source-map",
+    mode: "production",
+    devtool: "cheap-module-source-map",
     devServer: {
         contentBase: "./dist",
         open: true,
@@ -55,7 +55,6 @@ module.exports = {
                     {
                         loader: "css-loader",
                     },
-                    "sass-loader",
                     "postcss-loader",
                 ],
             },
