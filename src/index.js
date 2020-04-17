@@ -1,5 +1,3 @@
-import { add } from "./math";
-import "@babel/polyfill";
-import "./index.css";
+import { union } from "lodash";
 
-add(1, 2);
+console.log(union([1], [2]));

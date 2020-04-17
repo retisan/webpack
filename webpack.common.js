@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-    mode: "development",
     entry: {
         main: "./src/index.js",
     },
@@ -15,6 +14,7 @@ module.exports = {
                 use: {
                     loader: "babel-loader",
                     options: {
+                        plugins: ['lodash'],
                         presets: [
                             [
                                 "@babel/preset-env",
