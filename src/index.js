@@ -1,3 +1,5 @@
-import { union } from "lodash";
-
-console.log(union([1], [2]));
+document.addEventListener("click", () => {
+    import("./click").then(({ default: fn }) => {
+        fn();
+    });
+});

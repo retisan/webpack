@@ -7,14 +7,8 @@ const prodConfig = {
     optimization: {
         // 拆分资源
         splitChunks: {
-            cacheGroups: {
-                common: {
-                    chunks: 'async',
-                    minChunks: 1,
-                    name: 'common'
-                }
-            }
-        }
+            chunks: "async",
+        },
     },
 };
 
