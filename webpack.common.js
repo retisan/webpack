@@ -1,4 +1,3 @@
-const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -6,7 +5,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
     entry: {
         main: "./src/index.js",
-        sub: "./src/sub.js"
     },
     module: {
         rules: [
@@ -24,6 +22,7 @@ module.exports = {
                                     targets: {
                                         chrome: "64",
                                     },
+                                    corejs: "3",
                                     useBuiltIns: "entry", // 使用babel-polyfill时，只处理使用过的es6相关特性
                                 },
                             ],
@@ -55,10 +54,6 @@ module.exports = {
                 ],
             },
         ],
-    },
-    output: {
-        filename: "[name].js",
-        path: path.resolve(__dirname, "dist"),
     },
     plugins: [
         new HtmlWebpackPlugin({

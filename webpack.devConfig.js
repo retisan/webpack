@@ -13,7 +13,12 @@ const devConfig = {
     plugins: [
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    output: {
+        filename: "[name].js",
+        path: path.resolve(__dirname, "dist"),
+        chunkFilename: "[name].chunk.js"
+    },
 };
 
 module.exports = merge(commonConfig, devConfig);

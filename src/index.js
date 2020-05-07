@@ -1,7 +1,6 @@
-import "./index.css";
 
-document.addEventListener("click", () => {
-    import("./click").then(({ default: fn }) => {
-        fn();
-    });
-});
+import _ from "lodash";
+import $ from "jquery";
+
+console.warn("object");
+
