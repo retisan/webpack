@@ -1,5 +1,6 @@
 const commonConfig = require("./webpack.common");
 const merge = require("webpack-merge");
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const prodConfig = {
     mode: "production",
@@ -9,6 +10,9 @@ const prodConfig = {
         splitChunks: {
             chunks: "async",
         },
+        minimizer: [
+            new OptimizeCSSAssetsPlugin({})
+        ]
     },
 };
 
