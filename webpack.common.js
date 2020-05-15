@@ -1,10 +1,16 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require("path");
 
 module.exports = {
     entry: {
         main: "./src/index.js",
+    },
+    resolve: {
+        alias: {
+            "@components": path.resolve(__dirname, "src/components/"),
+        },
     },
     module: {
         rules: [
@@ -14,7 +20,7 @@ module.exports = {
                 use: {
                     loader: "babel-loader",
                     options: {
-                        plugins: ['lodash'],
+                        plugins: ["lodash"],
                         presets: [
                             [
                                 "@babel/preset-env",
@@ -61,8 +67,8 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[id].css',
-        })
+            filename: "[name].css",
+            chunkFilename: "[id].css",
+        }),
     ],
 };

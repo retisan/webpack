@@ -13,7 +13,7 @@ const prodConfig = {
             chunks: "all",
         },
         minimizer: [
-            new OptimizeCSSAssetsPlugin({})
+            new OptimizeCSSAssetsPlugin({}) // 压缩css代码
         ]
     },
     output: {

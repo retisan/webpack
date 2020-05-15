@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const commonConfig = require("./webpack.common");
+const path = require("path");
 // plugins帮助我们在webpack打包的生命周期中做一些事情
 const devConfig = {
     mode: "development",
