@@ -7,11 +7,6 @@ module.exports = {
     entry: {
         main: "./src/index.js",
     },
-    resolve: {
-        alias: {
-            "@components": path.resolve(__dirname, "src/components/"),
-        },
-    },
     module: {
         rules: [
             {
