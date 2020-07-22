@@ -5,17 +5,16 @@ const path = require("path");
 
 module.exports = {
     entry: {
-        main: "./src/index.js",
+        main: "./src/index.ts",
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|ts)$/,
                 exclude: /node_modules/, // 忽略node_modules，提升打包速度
                 use: {
                     loader: "babel-loader",
                     options: {
-                        plugins: ["lodash"],
                         presets: [
                             [
                                 "@babel/preset-env",
@@ -28,6 +27,7 @@ module.exports = {
                                 },
                             ],
                             "@babel/preset-react",
+                            "@babel/preset-typescript"
                         ],
                     },
                 },
